@@ -1,0 +1,5 @@
+class 管理员{
+    String adminID
+    String password
+    +增、删、查、改()
+}

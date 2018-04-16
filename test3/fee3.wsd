@@ -1,0 +1,17 @@
+class 书籍信息{
+    +String  ISBN
+    +String 书名
+    +Number 数量
+    +String 作者
+    +String 出版社
+    +Date 出版日期
+    +String 描述
+    +int 库存
+    +int 价格
+    +List<String> 分类
+    +String 书籍状态
+    +新增书籍信息()
+    +删除书籍信息()
+    +更新书籍信息()
+    +查询书籍信息()
+}

@@ -1,0 +1,12 @@
+class 借阅书籍{
+    +String  ISBN
+    +String  借阅者ID
+    +Number  借阅数量
+    +Data  借书时间
+    +Data  还书时间
+    +String  书籍活跃度
+    +新增书籍()
+    +删除书籍()
+    +更新书籍()
+    +查询书籍()
+}
