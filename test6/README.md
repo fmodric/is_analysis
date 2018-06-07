@@ -15,7 +15,7 @@
 
 ## 2.系统总体结构
 ![](./系统总体结构.png '描述')
-界面设计参见： https://github.com/fmodric/is_analysis/blob/master/test6/ui/%E5%AD%A6%E7%94%9F%E5%88%97%E8%A1%A8.html
+界面设计参见： https://fmodric.github.io/is_analysis/test6/ui/%E5%AD%A6%E7%94%9F%E5%88%97%E8%A1%A8.html
 ## 3.用例图设计 [源码](src/useCase.puml)
 ![](./useCase.png)
 ## 4.类图设计[源码](src/class.puml)
