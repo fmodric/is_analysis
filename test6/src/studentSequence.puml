@@ -1,0 +1,15 @@
+@startuml
+title 基于GitHub的实验管理平台--学生列表用例顺序图
+actor users
+users -> students: 查看学生列表集
+alt 如果users是老师
+	students -> systems: 查看当前学期
+    systems -> courses: 查看所有课程
+    courses -> tests: 选择课程进入实验部分
+	tests -> grades: 实验总分，实验各评分项评分
+	grades --> users:返回每个学生的信息、及每个实验的所有评分项成绩
+else 如果users是students，或者未登录
+    students --> users:返回每个学生的信息
+end
+
+@enduml

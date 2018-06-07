@@ -1,0 +1,14 @@
+@startuml
+title 基于GitHub的实验管理平台--指定用户权限用例顺序图
+actor users
+alt 如果users是老师
+	users -> teachers
+    teachers -> systems: 是否有权限继续访问学期
+	systems --> users: 返回信息，若有权限，则把id标记改变
+else 如果users是students，或者未登录
+    users --> students
+    students ->systems: 是否有权限继续访问学期
+    systems ->users
+end
+
+@enduml

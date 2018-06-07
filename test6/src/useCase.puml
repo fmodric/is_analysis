@@ -1,0 +1,30 @@
+@startuml
+title 高大上基于github的实验管理平台--用例图
+actor teachers
+actor students
+actor users
+users <|-- teachers
+users <|-- students
+
+package 用户用例集 {
+users --up-> (登录)
+users --up-> (注销)
+users --up-> (修改用户信息)
+users --up-> (查看用户信息)
+users --up-> (上传图片)
+users --up-> (制定用户权限)
+}
+
+package 功能用例集{
+teachers ---> (学期选择)
+(学期选择) ---> (课程选择)
+teachers ---> (评定成绩)
+teachers ---> (课程选择)
+teachers ---> (课程维护)
+students ---> (学期选择)
+students ---> (学生列表)
+(学生列表) ---> (查看总成绩)
+(学生列表) ---> (查看具体评分项)
+}
+
+@enduml

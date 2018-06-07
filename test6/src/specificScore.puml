@@ -1,0 +1,12 @@
+@startuml
+title 基于GitHub的实验管理平台--查看具体评分项用例顺序图
+actor students
+alt 
+	students -> systems: 进行学期的选择
+    systems -> courses: 查看所有课程
+    courses -> tests: 查看所有实验项目
+    tests -> grades: 查看课程下所有实验评分项
+	grades --> students: 返回该学生的所有实验成绩
+end
+
+@enduml

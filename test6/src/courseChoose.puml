@@ -1,0 +1,19 @@
+@startuml
+title 基于GitHub的实验管理平台--课程选择用例顺序图
+actor users
+users -> typeteachar: 教师是否选择了课程
+alt 如果users是老师
+	typeteachar -> systems: 若typeteacher=0，则查看当前学期
+    systems -> courses: 查看所有课程
+    courses -> coursechoose: 选择课程
+	coursechoose --> users: 返回每个用户所选择的课程
+else 如果users是students
+    users -->typeteachar: 先查看教师是否进行了课程选择
+    typeteachar -->users: 若typeteacher=0，则不能进行课程选择，返回空
+    typeteachar -> systems: 若typeteacher=1，则查看当前学期
+    systems -> courses: 查看所有课程
+    courses -> coursechoose: 选择课程
+	coursechoose --> users: 返回每个用户所选择的课程
+end
+
+@enduml

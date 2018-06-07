@@ -1,0 +1,13 @@
+@startuml
+title 基于GitHub的实验管理平台--评定成绩用例顺序图
+actor teachers
+== 查看成绩 ==
+teachers -> students : 输入学号
+students -> systems : 选择学期
+systems -> courses :进入该老师所教授的课程
+courses ->tests :勾选所有实验
+tests -> grades 
+grades --> teachers:所有实验的评分，具体评分项，评语。
+== 评定成绩 ==
+teachers -> grades: 录入并提交每个实验的成绩（以及具体评分项）
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+title 基于GitHub的实验管理平台--查看总成绩用例顺序图
+actor users
+alt 
+	users -> teachers
+    teachers -> users
+else 
+    users --> students
+    students --> users
+end
+
+@enduml

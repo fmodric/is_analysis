@@ -1,0 +1,21 @@
+@startuml
+title 基于GitHub的实验管理平台--查看总成绩用例顺序图
+actor users
+users -> typeteachar: 教师是否选择了课程
+alt 如果users是老师
+	typeteachar -> systems: 若typeteacher=0，则进行学期的选择
+    systems -> courses: 查看所有课程
+    courses -> tests: 查看所有实验项目
+    tests -> grades: 查看课程下总分及评语
+	grades --> users: 返回每个用户的课程成绩
+else 如果users是students
+    users -->typeteachar: 先查看教师是否进行了课程选择
+    typeteachar -->users: 若typeteacher=0，则不能进行课程选择，返回空
+    typeteachar -> systems: 若typeteacher=1，则查看当前学期
+    systems -> courses: 查看所有课程
+    courses -> tests: 查看所有实验项目
+    tests -> grades: 查看课程下总分及评语
+	grades --> users: 返回每个用户的课程成绩
+end
+
+@enduml
